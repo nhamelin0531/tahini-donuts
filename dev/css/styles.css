@@ -75,6 +75,7 @@ body {
 
 .banner-img h1 {
   color: #03A696;
+  max-width: 270px;
   border-radius: 0 10%;
   font-size: 8rem;
   font-weight: 700;
@@ -149,5 +150,55 @@ img {
   display: block;
   margin: 0 auto;
   width: 100%;
+}
+
+@media (min-width: 612px) {
+  .container {
+    width: 90%;
+    max-width: 700px;
+  }
+  .banner-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-height: 60vh;
+  }
+  .container > section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container > section img {
+    max-height: 600px;
+    max-width: 50%;
+    aspect-ratio: auto;
+    max-height: 600px;
+    margin: 0;
+  }
+  .container > section:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1012px) {
+  .container {
+    max-width: 1000px;
+  }
+  .container section {
+    margin-bottom: 60px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
